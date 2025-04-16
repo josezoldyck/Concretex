@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0e0f16d0 0%, #000000 100%);
+            color: white;
+            animation: gradientBackground 10s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #000000;
+        }
+
+        .content {
+            padding-top: 80px;
+            display: none;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 80px auto 0;
+            text-align: center;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .calendar {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        .activities-section img {
+            width: 100%; /* Cambia a 100% para que se ajuste al contenedor */
+            max-width: 300px; /* Tamaño máximo de las imágenes */
+            height: auto; /* Mantiene la proporción de aspecto */
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        .videos-section {
+            margin-top: 2rem;
+        }
+
+        .video {
+            margin: 10px;
+            width: 100%; /* Cambia a 100% para que se ajuste al contenedor */
+            max-width: 600px; /* Tamaño máximo de los videos */
+            height: auto; /* Mantiene la proporción de aspecto */
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .calendar iframe {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="#inicio" onclick="showSection('inicio')" style="color: white; text-decoration: none;">Concretex</a></div>
+        <ul class="nav-links">
+            <li><a href="#Nosotros" onclick="showSection('Nosotros')">Nosotros</a></li>
+            <li><a href="#Productos" onclick="showSection('Productos')">Productos</a></li>
+            <li><a href="#Proyectos" onclick="showSection('Proyectos')">Proyectos</a></li>
+            <li><a href="#contacto" onclick="showSection('contacto')">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Pagina Principal -->
+    <div id="inicio" class="content active">
+        <h1>Concretex</h1>
+        <p>Especialistas en concreto</p>
+        <div class="videos-section">
+            <h2>Nuestras Plantas</h2>
+            <iframe class="video" src="https://www.youtube.com/embed/tu_video_id" frameborder="0" allowfullscreen></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/tu_video_id" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Sección de Productos -->
+    <div id="Productos" class="content">
+        <h1>Productos</h1>
+        <h2>Fotos Recientes</h2>
+        <div class="activities-section">
+            <img src="Darth Vader.jpg" alt="Foto 1">
+            <p>Darth Vader Lego</p>
+            <img src="Kylo Ren.jpg" alt="Foto 2">
+            <p>Kylo Ren Lego</p>
+            <img src="Mando.webp" alt="Foto 3">
+            <p>Mando Lego</p>
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+    </div>
+
+    <!-- Sección Nosotros -->
+    <div id="Nosotros" class="content">
+        <h1>Nosotros</h1>
+        <h2>----</h2>
+        <div class="about-section"></div>
+        <div class="about-item">
+            <h3>Visión</h3>
+            <p>Ser líderes en la industria del concreto, ofreciendo soluciones innovadoras y de alta calidad.</p>
+        </div>
+        <div class="about-item">
+            <h3>Misión</h3>
+            <p>Entregar productos y servicios de concreto que superen las expectativas de nuestros clientes, comprometidos con la calidad y el medio ambiente.</p>
+        </div>
+        <div class="about-item">
+            <h3>Nuestra Empresa</h3>
+            <p>Somos una empresa con más de 20 años de experiencia en el sector del concreto, destacándonos por nuestra calidad y servicio al cliente.</p>
+        </div>
+    </div>
+
+    <!-- Sección Contacto -->
+    <div id="contacto" class="content">
+        <h1>Contacto</h1>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>+507 233 5555</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>contacto@ejemplo.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>P. Sherman, Calle Wallaby 42, Sidney</p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <p><a href="https://wa.me/1234567890" target="_blank" style="color: white; text-decoration: none;">+1 234 567 890</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/nombre-pagina" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/nombre-pagina" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/nombre-pagina" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.tiktok.com/nombre-pagina" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostrar la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+
+            // Cambiar el fondo según la sección
+            if (sectionId === 'actividades') {
+                document.body.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+            } else if (sectionId === 'contacto') {
+                document.body.style.background = 'linear-gradient(135deg, #2b5876 0%, #4e4376 100%)';
+            } else {
+                document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+        }
+    </script>
+</body>
+</html>
