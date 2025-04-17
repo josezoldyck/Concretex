@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
+    <title>Sitio Web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -12,6 +12,8 @@
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
         }
+
+        /* Letras Pagina principal */
 
         body {
             min-height: 100vh;
@@ -27,8 +29,9 @@
             100% { background-position: 0% 50%; }
         }
 
+        /* Barra principal */
         nav {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(5, 28, 133, 0.1);
             backdrop-filter: blur(10px);
             padding: 1rem 2rem;
             display: flex;
@@ -40,17 +43,20 @@
             z-index: 1000;
         }
 
+        /* Logo Concretex */
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
         }
 
+        /* separacion de la barra principal */
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
 
+        /* Texto de la barra principal */
         .nav-links a {
             color: white;
             text-decoration: none;
@@ -58,10 +64,12 @@
             transition: color 0.3s;
         }
 
+        /* Color de selector barra principal */
         .nav-links a:hover {
-            color: #000000;
+            color: #0e0afa;
         }
 
+        /* Texto del contenido de la barra */
         .content {
             padding-top: 80px;
             display: none;
@@ -75,18 +83,20 @@
             display: block;
         }
 
+        /* Texto pagina principal */
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
         .calendar {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(241, 5, 5, 0.1);
             padding: 1rem;
             border-radius: 10px;
             margin-top: 2rem;
         }
 
+        /*Letras de la seccion contacto */
         .contact-info {
             display: flex;
             flex-direction: column;
@@ -94,6 +104,7 @@
             margin-top: 2rem;
         }
 
+        /* Separacion Letras de contanto */
         .contact-item {
             display: flex;
             align-items: center;
@@ -102,12 +113,13 @@
             font-size: 1.2rem;
         }
 
+        /* Barra de redes sociales */
         footer {
             position: fixed;
             bottom: 0;
             width: 100%;
             padding: 1rem;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(5, 28, 133, 0.1);
         }
 
         .social-links {
@@ -147,6 +159,7 @@
             margin: 10px;
         }
 
+        /* seccion de video */
         .videos-section {
             margin-top: 2rem;
         }
@@ -185,32 +198,18 @@
         </ul>
     </nav>
 
-    <!-- Pagina Principal -->
+    <!-- Seccion Principal -->
     <div id="inicio" class="content active">
         <h1>Concretex</h1>
         <p>Especialistas en concreto</p>
         <div class="videos-section">
             <h2>Nuestras Plantas</h2>
-            <iframe class="video" src="https://www.youtube.com/embed/tu_video_id" frameborder="0" allowfullscreen></iframe>
-            <iframe class="video" src="https://www.youtube.com/embed/tu_video_id" frameborder="0" allowfullscreen></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/watch?v=mhNg55_IYiw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
-    <!-- Sección de Productos -->
-    <div id="Productos" class="content">
-        <h1>Productos</h1>
-        <h2>Fotos Recientes</h2>
-        <div class="activities-section">
-            <img src="Darth Vader.jpg" alt="Foto 1">
-            <p>Darth Vader Lego</p>
-            <img src="Kylo Ren.jpg" alt="Foto 2">
-            <p>Kylo Ren Lego</p>
-            <img src="Mando.webp" alt="Foto 3">
-            <p>Mando Lego</p>
-            <!-- Agrega más imágenes según sea necesario -->
-        </div>
-    </div>
-
+    
     <!-- Sección Nosotros -->
     <div id="Nosotros" class="content">
         <h1>Nosotros</h1>
@@ -227,6 +226,35 @@
         <div class="about-item">
             <h3>Nuestra Empresa</h3>
             <p>Somos una empresa con más de 20 años de experiencia en el sector del concreto, destacándonos por nuestra calidad y servicio al cliente.</p>
+        </div>
+    </div>
+    
+    <!-- Sección de Productos -->
+    <div id="Productos" class="content">
+        <h1>Productos</h1>
+        <h2>Fotos Recientes</h2>
+        <div class="activities-section">
+            <img src="Darth Vader.jpg" alt="Foto 1">
+            <p>Darth Vader Lego</p>
+            <img src="Kylo Ren.jpg" alt="Foto 2">
+            <p>Kylo Ren Lego</p>
+            <img src="Mando.webp" alt="Foto 3">
+            <p>Mando Lego</p>
+            <!-- Se pueden agregar mas imagenes, crear modo collage-->
+        </div>
+    </div>
+
+    <!-- Sección de Proyectos -->
+    <div id="Proyectos" class="content">
+        <h1>Proyectos</h1>
+        <h2>Fotos Recientes</h2>
+        <div class="activities-section">
+            <img src="Darth Vader.jpg" alt="Foto 1">
+            <p>Darth Vader Lego</p>
+            <img src="Kylo Ren.jpg" alt="Foto 2">
+            <p>Kylo Ren Lego</p>
+            <iframe class="video" src="https://www.youtube.com/embed/watch?v=mhNg55_IYiw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Se puede agregar fotos y videos-->
         </div>
     </div>
 
@@ -248,7 +276,11 @@
             </div>
             <div class="contact-item">
                 <i class="fab fa-whatsapp"></i>
-                <p><a href="https://wa.me/1234567890" target="_blank" style="color: white; text-decoration: none;">+1 234 567 890</a></p>
+                <p><a href="https://wa.me/1234567890" target="_blank" style="color: white; text-decoration: none;">+1 234 567 890</a></p>    
+            </div>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.1292587475564!2d-79.48770972498139!3d9.006659291053806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca997158a703f%3A0x17f56661b151abf3!2sPanam%C3%A1%20Viejo!5e1!3m2!1sen!2spa!4v1744911095126!5m2!1sen!2spa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </div>
